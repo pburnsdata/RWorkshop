@@ -5,8 +5,20 @@
 # 4/13/2021
 #
 
+# Before we start using ggplot, let's install and load it
+# then prepare a new data frame for us to experiment with
+
+# Install the ggplot2 package
+install.packages("ggplot2")
+
+# Load the ggplot2 and dplyr packages
+library(ggplot2)
+library(dplyr)
+
 # Load mpg dataset with gas mileage and specifications for various cars
 data(mpg)
+
+### Helpful functions for learning about new data frames ###
 
 length(mpg) #Check how many columns mpg data frame has
 
@@ -14,14 +26,18 @@ colnames(mpg) #Print the names of the columns
 
 nrow(mpg) #Check how many rows mpg data frame has
 
+############################################################
+
 ## Exercise #####################################
 # Filter the mpg dataset to include only rows  
 # where the manufacturer is toyota and save results to variable toyota_mpg
 
 
-
 # Using toyota_mpg, select the variables: model, year, cty, hwy, class
 # and save results to toyota_mpg_subset
+
+
+# How many rows and columns does this new data frame have?
 
 
 # Click on your newly created toyota_mpg_subset in the "Environment" pane
@@ -32,12 +48,6 @@ nrow(mpg) #Check how many rows mpg data frame has
 #################  Introduction to ggplot ####################
 # ggplot is a system for creating graphics via declarations. It is based on 
 # The Grammar of Graphics (https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl?ie=UTF8&qid=1477928463&sr=8-1&keywords=the+grammar+of+graphics&linkCode=sl1&tag=ggplot2-20&linkId=f0130e557161b83fbe97ba0e9175c431)
-
-# Install the ggplot2 package
-install.packages("ggplot2")
-
-# Load the ggplot2 package
-library(ggplot2)
 
 cookies <- data.frame(Cookie_Type = c("Chocolate","Raisin","Sugar"),
                       Count = c(15,17,4))
@@ -71,7 +81,7 @@ ggplot(toyota_mpg_subset, aes(x=hwy, y=cty, color = class)) +
 ggplot(toyota_mpg_subset, aes(x=hwy, y=cty)) +
   # Geometric object
   geom_point() +
-  # Facet by Species
+  # Facet by class
   facet_wrap(~class)
 
 # Add color on top of facet
@@ -79,7 +89,7 @@ ggplot(toyota_mpg_subset, aes(x=hwy, y=cty)) +
 ggplot(toyota_mpg_subset, aes(x=hwy, y=cty, color=model)) +
   # Geometric object
   geom_point() +
-  # Facet by Species
+  # Facet by class
   facet_wrap(~class)
 
 ## Let's try another geometric object - bar

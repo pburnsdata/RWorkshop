@@ -52,6 +52,10 @@
 # Is 15693 divided by 534 greater than 30?
 
 
+# Add a comment below that says 3 + 4 and verify that R doesn't 
+# try to interpret/calculate it
+
+
 #################################################
 
 ##################  Data Types ###################

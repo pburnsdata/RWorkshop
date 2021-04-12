@@ -6,7 +6,7 @@
 #
 ##################################
 ###  What is a programming language ? ###
-#A language designed to give instructions to machines
+#A language designed for humans to give instructions to machines
 
 ##################   Try out console  ###################
 
@@ -188,11 +188,11 @@ adverse_events_clean <- select(adverse_events, c("ID","AECODE","AESTARTDY","AEEN
 write.csv(adverse_events_sorted, "./sorted_aes.csv")
 
 # How does this differ from excel? 
-#Programming
-#R can read any type of data
-#More powerful and efficient importing and manipulation of data
-#Automation!
-#Reproducibility!
-#Easier to find errors
-#Advanced analytical abilities
+#    Programming vs point and click
+#    R can read any type of data
+#    More powerful and efficient importing and manipulation of data
+#    Automation!
+#    Reproducibility!
+#    Easier to find errors
+#    Advanced analytical abilities
 

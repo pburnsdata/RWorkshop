@@ -120,7 +120,8 @@ aes_from_csv <- read.csv('./sorted_aes.csv')
 install.packages("readxl")
 library(readxl)
 
-excel_test_file <- read_excel("./original_ae.xlsx") #You wont have this file on your machines, but this is the syntax you'll use to read in xlsx files
+excel_test_file <- read_excel("./original_ae.xlsx")
 
-# Depending on redcap or craniums set up could even pull data directly from source
+#Depending on redcap or craniums set up, could even pull data 
+#directly from source via api or db connection
 
